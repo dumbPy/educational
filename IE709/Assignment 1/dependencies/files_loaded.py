@@ -14,10 +14,10 @@ else:
   import os
   direct = os.getcwd()
   import platform
-  if (platform.system()=='Linux'):
-      extra = '/dependencies'
-  else:
+  if (platform.system()=='Windows'):
       extra = '\\dependencies'
+  else:
+      extra = '/dependencies'
   file=open(os.path.join(direct+extra,"pop.txt"),'r')
 population = file.read().splitlines()
 file.close()
